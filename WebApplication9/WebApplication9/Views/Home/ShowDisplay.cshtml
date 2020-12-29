@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewData["Title"] = "ShowDisplay";
+}
+    
+    <form>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+        <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+
+        <button type="button" id="btnSearchSubmit">Submit</button>
+        <div class="container">
+            <table id="example" class="display" width="100%">
+            </table>
+        </div>
+        <script type="text/javascript">
+            var columns = [];
+
+            function getDT() {
+                console.log('called getDt');
+                $.ajax({
+                    type: "post",
+                    url:'@(Url.Action("ShowDisplay", "Home"))',
+                    contentType: 'application/x-www-form-urlencoded',
+                    success: function (data) {
+                        debugger;
+                        var newData = JSON.stringify(data);
+                        //console.log(newData);
+                        data = JSON.parse(newData);
+                        console.log(data);
+                        // console.log(data.data[0]);
+                        columnNames = Object.keys(data.data[0]);
+                        for (var i in columnNames) {
+                            columns.push({
+                                data: columnNames[i],
+                                title: capitalizeFirstLetter(columnNames[i])
+                            });
+                        }
+                        $('#example').DataTable({
+                            "processing": true,
+                            "serverSide": true,
+
+                            "ajax": {
+                                "url": "/Home/ShowDisplay",
+                                "type": "post",
+                                "datatype": "json"
+                            },
+                            columns: columns
+                        });
+                    }
+                });
+            }
+
+            function capitalizeFirstLetter(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
+            $(document).ready(function () {
+
+                $("#btnSearchSubmit").click(function () {
+
+                    debugger;
+                getDT();
+                });
+
+            });
+
+        </script>
+
+        <style>
+            body {
+                font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #333;
+                background-color: #fff;
+            }
+
+
+            div.container {
+                min-width: 980px;
+                margin: 0 auto;
+            }
+        </style>
+    </form>
