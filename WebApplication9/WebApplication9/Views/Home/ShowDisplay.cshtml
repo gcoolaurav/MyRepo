@@ -2,19 +2,19 @@
 @{
     ViewData["Title"] = "ShowDisplay";
 }
-    
-    <form>
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-        <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-        <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+<form>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-        <button type="button" id="btnSearchSubmit">Submit</button>
-        <div class="container">
-            <table id="example" class="display" width="100%">
-            </table>
-        </div>
-        <script type="text/javascript">
+    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+    <input type="text" id="txt1" />
+    <button type="button" id="btnSearchSubmit">Submit</button>
+    <div class="container">
+        <table id="example" class="display" width="100%">
+        </table>
+    </div>
+    <script type="text/javascript">
             var columns = [];
 
             function getDT() {
@@ -23,6 +23,9 @@
                     type: "post",
                     url:'@(Url.Action("ShowDisplay", "Home"))',
                     contentType: 'application/x-www-form-urlencoded',
+                    data: {
+                        txt1: $("#txt1").val()
+                    },
                     success: function (data) {
                         debugger;
                         var newData = JSON.stringify(data);
@@ -44,7 +47,10 @@
                             "ajax": {
                                 "url": "/Home/ShowDisplay",
                                 "type": "post",
-                                "datatype": "json"
+                                "datatype": "json",
+                                "data": {
+                                    txt1: $("#txt1").val()
+                                }
                             },
                             columns: columns
                         });
@@ -66,21 +72,21 @@
 
             });
 
-        </script>
+    </script>
 
-        <style>
-            body {
-                font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
-                color: #333;
-                background-color: #fff;
-            }
+    <style>
+        body {
+            font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+        }
 
 
-            div.container {
-                min-width: 980px;
-                margin: 0 auto;
-            }
-        </style>
-    </form>
+        div.container {
+            min-width: 980px;
+            margin: 0 auto;
+        }
+    </style>
+</form>

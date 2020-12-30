@@ -29,12 +29,14 @@ namespace WebApplication9.Controllers
         }
         
         [HttpPost]
-        public async Task<ActionResult> ShowDisplay()
+        public async Task<JsonResult> ShowDisplay()
         {
+            EmployeeData emp = new EmployeeData();
             try
             {
                 int draw = Convert.ToInt32(Request.Form["draw"].FirstOrDefault());
                 int start = Convert.ToInt32(Request.Form["start"].FirstOrDefault());
+                var name1 = Request.Form["txt1"];
                 int recordscount = Convert.ToInt32(Request.Form["length"].FirstOrDefault());
                 if (recordscount == 0)
                     recordscount = 10;
@@ -47,7 +49,7 @@ namespace WebApplication9.Controllers
                         reservationList = JsonConvert.DeserializeObject<List<Employee>>(apiResponse);
                     }
                 }
-                EmployeeData emp = new EmployeeData();
+                
                 emp.draw = draw;
                 emp.recordsFiltered = reservationList.Count();
                 emp.recordsTotal = reservationList.Count();
@@ -59,7 +61,7 @@ namespace WebApplication9.Controllers
             {
 
             }
-            return View("ShowDisplay");
+            return Json(emp);
         }
 
         [HttpPost]

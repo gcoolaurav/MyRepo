@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\WebApplication9\\WebApplication9.csproj": {}
+    "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\WebApplication9\\WebApplication9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\WebApplication9\\WebApplication9.csproj": {
+    "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\WebApplication9\\WebApplication9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\WebApplication9\\WebApplication9.csproj",
+        "projectUniqueName": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\WebApplication9\\WebApplication9.csproj",
         "projectName": "WebApplication9",
-        "projectPath": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\WebApplication9\\WebApplication9.csproj",
+        "projectPath": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\WebApplication9\\WebApplication9.csproj",
         "packagesPath": "C:\\Users\\Gaurav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\WebApplication9\\obj\\",
+        "outputPath": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\WebApplication9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gaurav\\AppData\\Roaming\\NuGet\\NuGet.Config",

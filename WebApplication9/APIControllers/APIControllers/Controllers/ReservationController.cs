@@ -16,8 +16,13 @@ namespace APIControllers.Controllers
         private IRepository repository;
         public ReservationController(IRepository repo) => repository = repo;
 
-        [HttpPost]
-        public IEnumerable<Reservation> Display() => repository.Reservations;
+        [HttpGet]
+        [Route("[action]")]
+        //public IEnumerable<Reservation> Display() => repository.Reservations;
+        public IEnumerable<Reservation> Display()
+        {
+            return repository.Reservations;
+        }
 
 
         [HttpGet("{id}")]

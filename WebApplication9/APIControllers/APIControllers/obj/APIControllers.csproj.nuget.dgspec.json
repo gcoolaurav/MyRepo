@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj": {}
+    "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj": {
+    "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj",
+        "projectUniqueName": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj",
         "projectName": "APIControllers",
-        "projectPath": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj",
+        "projectPath": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\APIControllers\\APIControllers\\APIControllers.csproj",
         "packagesPath": "C:\\Users\\Gaurav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gaurav\\source\\repos\\WebApplication9\\APIControllers\\APIControllers\\obj\\",
+        "outputPath": "C:\\Users\\Gaurav\\Downloads\\WebApplication9\\APIControllers\\APIControllers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gaurav\\AppData\\Roaming\\NuGet\\NuGet.Config",
